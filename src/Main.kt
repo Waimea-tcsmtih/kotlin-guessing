@@ -11,7 +11,15 @@ fun main() {
     println("________________________________________________")
     println()
 
+
+    val playername = getString("enter yourtname: ")
+    println ("Nice to meet you, $playername")
+
+
     val numToGuess = (1..100).random()
+
+
+
 
 
 //ask the user for the guess
@@ -20,29 +28,50 @@ fun main() {
 //Otherwise give high/lower feedback
 
 
-    print("What is your name? ")
-    val name = readln()
-    println("Mmmmmm $name, I see!")
-
     println("Im thinking of a number from 1 to 100")
     println("Can you guess it?")
 
-    print("$name, Enter your  number: ")
+        if (guess == null)
+    print("Enter your  number: ")
     val number = readln().toIntOrNull()
     if (number == null) {
-        println("that's not a number")
+
 
     }
-    when (number) {
 
 
+    /**
+     * function to get a string from user
+     * parameters
+     *- prompt - Text to show the user
+     * returns
+     * - string that user types
+     */
+    fun getString(prompt: String): String {
+        while (true)
+            print(prompt)
+        val userInput: string
+            val userInput = readln()
+            if (userInput.isNotBlank()) break
 
-     -> println("Seven is just the best")
-    88 -> println("No, That's unlucky")
-    69 -> println("GYAAT! But no.....")
-
+    }
+    return userInput
 
 }
+
+/**
+ * Function to get an Int from the user
+ */
+    fun getInt(prompt: String): Int {
+        while (true) {
+        val userInput = getString(prompt)
+        val intValue = userInput.toIntOrnull()
+        if (intValue != null) break
+
+        }
+        return intValue
+
+    }
 
 
 
